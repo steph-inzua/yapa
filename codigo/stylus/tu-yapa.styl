@@ -1,0 +1,116 @@
+@require "base/utiles"
+@require "nib"
+@require "animations"
+
+.columns
+	height 100vh
+	display flex
+	align-items center
+	+hasta( escritorio )
+		display inherit
+		height 100%
+ 	.col1
+		width 45%
+		padding 0 20px
+		+hasta( escritorio )
+			width 100%
+			padding 0
+	.col2
+		width 35%
+		padding 0 20px
+		margin-right 20%
+		+hasta( escritorio )
+			width 100%
+			padding 0
+	 
+	
+.paginas
+	.cabecera
+		text-align center
+		h3
+			font-family 'PermanentMarker'
+			font-size (26 / 16)rem
+			color azul3
+			font-weight bold
+			letter-spacing -2px
+			margin 30px 0
+			span
+				display block
+				font-size (29 / 16)rem
+ 	
+	.form
+		.label-sm
+		.label-s
+			input
+			select
+			textarea
+				border none
+				background gris4
+				box-sizing border-box
+				padding 12px 20px
+				border-radius 5px
+				width 100%
+				outline none
+				font-family "Dinot"
+				font-size (13 / 16)rem
+				
+					
+				
+		.label-sm
+			width 50%
+			padding 5px
+			box-sizing border-box
+			float left
+			+hasta( escritorio )
+				width 100%
+			
+		.label-s
+			box-sizing border-box
+			width 100%
+			float left
+			padding 5px
+			select
+				background linear-gradient(top, blanco, gris4 70%)
+				border gris4
+				color negro
+			textarea
+				background #ccc
+				border-radius 0
+		.btn1
+			margin-top 5px
+	.proyectos
+		min-height 400px
+		position relative
+		text-align center
+		.ico1
+			absolute top 5px left 150px
+		.ico2
+			absolute top 150px left 70px
+		.ico3
+			absolute top 240px left 200px
+		.ico4
+			absolute top 170px left 340px
+		.ico5
+			absolute top 7px left 305px
+		.linea1
+			absolute top 105px left 130px
+		.linea2
+			absolute top 265px left 145px
+		.linea3
+			absolute top 245px left 325px
+		.linea4
+			absolute top 130px left 380px
+		.linea5
+			absolute top 40px left 255px
+		span
+			+hasta( escritorio )
+				display none
+		.ic
+			+hasta( escritorio )
+				position inherit
+				top 0
+				left 0
+				display inline-block
+				width 90px
+				margin 10px 30px
+			

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8">
+		<meta charset="utf8" />
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1.0, maximum-scale=1.0" />
+		<title>Yapa</title>
+		<link rel="stylesheet" href="css/general.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<script>
+			document.createElement("picture");
+		</script>
+		<script src="js/picturefill.min.js"></script>
+		<link rel="stylesheet" href="css/index.css" media="screen" title="estilo"> </head>
+	<body>
+		<section class="pagina">
+			<article id="cuerpo">
+				<!-- contenido -->
+				<section class="contenedor columns">
+					<div class="logo col">
+						<div class="emprendedor">
+							<img src="img/logo-se-un-emprendedor.png" alt="" />
+						</div>
+						<div class="yapa">
+							<span>CON LA</span>
+							<div>
+								<img src="img/logo-yapa.png" alt="" />
+							</div>
+						</div>
+					</div>
+					<div class="login col">
+						<form action="">
+							<a href="#" class="fb">
+								<i class="fa fa-facebook" aria-hidden="true"></i>
+								<span>INGRESA CON FACEBOOK</span>
+							</a>
+							<div>o</div>
+							<div class="form">
+								<input type="text" placeholder="Nombre" class="camp nombre" />
+								<input type="text" placeholder="Correo Electrónico" class="camp email" />
+								<span class="recordar">Si no recuerdas tu clave,
+									<a href="#">recupérala</a>
+								</span>
+								<input type="submit" class="submit btn1" value="INICIAR SESIÓN" /> </div>
+							<a href="#" class="crear">CREAR CUENTA</a>
+						</form>
+					</div>
+				</section>
+				<!-- / contenido -->
+			</article>
+			</div>
+		</section>
+		<div class="pop visibles">
+			<div class="hey1">
+				<img src="img/copa-act.png" alt="">
+				<br>
+				<img src="img/flecha-blanca.png" alt="">
+			</div>
+			<h3>HEY!</h3>
+			<p>Vas a salir de la sección, pero no te preocupe, tus beneficios y avances estarán guardados en la parte superior.</p>
+		</div>
+		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+		<script type="text/javascript" src="js/general.js" async defer></script>
+		<script src="js/index.js"></script>
+		<script>
+			$(document).ready(function()
+			{
+				var touch = $('#resp-menu');
+				var menu = $('.menu');
+				var sombra = $('.sombra');
+				$(touch).on('click', function(e)
+				{
+					e.preventDefault();
+					menu.slideToggle();
+				});
+			});
+		</script>
+	</body>
+</html>

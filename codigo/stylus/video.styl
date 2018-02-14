@@ -1,0 +1,32 @@
+@require "base/utiles"
+@require "nib"
+@require "animations"
+.paginas
+	flex-direction column
+	
+	.cabecera
+		text-align center
+		h2
+			color azul3
+			font-size (20 / 16)rem
+			border-bottom 1px solid azul3
+			padding 2px 0
+			display inline-block
+			letter-spacing -0.5px
+		h3
+			color rojo4
+			font-family 'PermanentMarker'
+			font-size (35 / 16)rem
+			font-weight bold
+			letter-spacing -2px
+			margin 30px 0
+ 
+	.videos
+		width 600px
+		margin-bottom 20px
+		+hasta( escritorio )	 
+			width 100%
+	.detalle-video
+		max-width 380px
+		text-align center
+		font-size (15 / 16)rem

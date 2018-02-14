@@ -1,0 +1,55 @@
+{% extends "estructura.twig" %}
+
+{% set seccion = "video" %}
+{% set info = datos.portada %}
+
+{% block css %}
+    <link rel="stylesheet" href="css/{{ seccion }}.css" media="screen" title="estilo">
+{% endblock %}
+
+{% block cuerpo %}
+ 
+	<!-- contenido -->
+	<section class="contenedor paginas">
+		<div class="cabecera">
+		  <h2>NIVEL 1: SER UN EMPRENDEDOR</h2>
+		  <h3>¿CÓMO EMPIEZO?</h3>
+
+		  
+		</div>
+
+
+		  <div class="videos">
+		  	<iframe width="100%" height="260" src="https://www.youtube.com/embed/K1A0ua1Xhok" frameborder="0" allowfullscreen></iframe>
+		  </div>
+
+		  <p class="detalle-video">Sed ut pers rrorpers rrorpers rror sit voluptatem accusantiu
+Lorem ipsum dolor sit amet, consectetur adipiscing</p>
+		  <div align="center"><a href="preguntas.html" class="btn1">CONTINUAR >>></a></div>
+
+		 
+
+	</section>
+		 
+		 
+	<!-- / contenido -->
+ 
+
+{% endblock %}
+
+{% block js %}
+<script src="js/{{ seccion }}.js"></script>
+<script>
+$(document).ready(function(){ 
+	var touch 	= $('#resp-menu');
+	var menu 	= $('.menu');
+	var sombra 	= $('.sombra');
+ 
+	$(touch).on('click', function(e) {
+		e.preventDefault();
+		menu.slideToggle();
+
+	});
+});
+</script> 
+{% endblock %}

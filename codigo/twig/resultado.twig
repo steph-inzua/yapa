@@ -1,0 +1,49 @@
+{% extends "estructura.twig" %}
+
+{% set seccion = "resultado" %}
+{% set info = datos.portada %}
+
+{% block css %}
+    <link rel="stylesheet" href="css/{{ seccion }}.css" media="screen" title="estilo">
+{% endblock %}
+
+{% block cuerpo %}
+ 
+	<!-- contenido -->
+	<section class="contenedor paginas">
+		<div class="cabecera">
+		  <h3>FELICITACIONES <span class="modo">EMPRENDEDOR</span></h3>
+		  <p class="sub">Tenemos un beneficio para ti por completar el primer nivel</p>			  
+		</div>
+		<div class="box-txt"></div>
+
+		 <p class="detalle">Quieres seguir conociendo más de los beneficios
+continua al siguiente nivel</p>
+		<div align="center"><a href="#" class="btn1">SIGUIENTE NIVEL >>></a></div>
+
+		<a href="#" class="btn2">COMPARTIR</a>
+
+	</section>
+		 
+		 
+	<!-- / contenido -->
+ 
+
+{% endblock %}
+
+{% block js %}
+<script src="js/{{ seccion }}.js"></script>
+<script>
+$(document).ready(function(){ 
+	var touch 	= $('#resp-menu');
+	var menu 	= $('.menu');
+	var sombra 	= $('.sombra');
+ 
+	$(touch).on('click', function(e) {
+		e.preventDefault();
+		menu.slideToggle();
+
+	});
+});
+</script> 
+{% endblock %}

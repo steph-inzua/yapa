@@ -1,0 +1,420 @@
+@require "base/utiles"
+@require "nib"
+
+
+global-reset()
+reset-html5()
+
+html *
+	background-color rgba( 0, 0, 0, 0.1 )
+	//outline 1px solid rgba( 255, 255, 0, 0.1 )
+
+	&:hover
+		//outline 1px solid rgba( 255, 0, 255, 0.5 )
+
+
+fuente( "Dinot", "Dinot-Regular" )
+fuente( "Dinot", "Dinot-Bold", bold )
+fuente( "Dinot-Medium", "Dinot-Medium" )
+fuente( "Dinot-Light", "Dinot-Light", light)
+//fuente( "DinotMedium", "Dinot-Medium" )
+
+fuente( "PermanentMarker", "PermanentMarker" )
+
+body
+	background url('../img/bg-gris.jpg') center no-repeat
+	background-size cover
+	margin 0
+	padding 0
+	font-family "Dinot"
+	font-weight normal
+	color gris
+	height 100vh
+	+hasta( escritorio )
+		height 100%
+
+	p
+		font-size (17 / 16)rem
+		color gris
+		line-height normal
+		letter-spacing -0.5px
+
+	a
+		text-decoration none
+
+
+img
+	max-width 100%
+
+.contenedor
+	max-width 1242px
+	margin 0 auto
+	display block
+	box-sizing border-box
+
+
+
+// encabezado
+#encabezado
+	position fixed
+	z-index 1
+	width 100vw
+	background azul3
+	letter-spacing -1px
+	+hasta( escritorio)
+		position inherit
+	.contenedor
+		display flex
+		justify-content space-between
+		align-items center
+		padding 0 14px
+
+	.titulo
+		position relative
+		z-index 99
+	.logo
+		display block
+		max-width 120px
+		margin 5px 0
+		+desde( escritorio )
+			max-width none
+
+	.menu
+		display flex
+		flex-direction row-reverse
+		align-items stretch
+		+hasta( escritorio )
+			display inherit
+			background alpha(azul3, 95%)
+		img
+			vertical-align middle
+		.niveles
+			background url('../img/line-menu.gif') repeat-y left center, url('../img/line-menu.gif') repeat-y right center
+			padding 6px 35px
+			+hasta( escritorio )
+				background rojo1
+			&:hover
+				background-color rojo1
+				background-image none
+			span
+				display block
+				background url('../img/icons/ico-nivel.png') no-repeat right center
+				padding 20px 50px 15px 0
+				+hasta( escritorio )
+					background url('../img/icons/ico-nivel-hov.png') no-repeat calc(50% + 50px) center
+					text-align center
+			&:hover
+				span
+					background url('../img/icons/ico-nivel-hov.png') no-repeat right center
+					+hasta( escritorio )
+						background url('../img/icons/ico-nivel-hov.png') no-repeat calc(50% + 50px) center
+						text-align center
+	 	.usuario
+			color blanco
+			padding 7px 0 0 31px
+			+hasta( escritorio )
+				text-align center
+			span
+				font-weight bold
+			img
+				margin-left 13px
+		.sub-menu
+			background linear-gradient(top, #f2f2f2, gris2)
+			border 1px solid #cbcbcb
+
+
+
+//barra
+#barra-menu
+	background linear-gradient(top, #f7f7f7, #ffffff)
+	position fixed
+	top 66px
+	z-index 1
+	width 100vw
+	letter-spacing -1px
+	z-index 0
+	+hasta( escritorio)
+		position inherit
+	.contenedor
+		max-width 980px
+
+	li
+		width 33.3333%
+		display inline-block
+		margin 0 -1px
+		vertical-align middle
+		a
+			display block
+			font-family 'PermanentMarker'
+			font-size (25 / 16)rem
+			font-weight bold
+			letter-spacing -0.5px
+			padding 20px 0
+			text-align center
+			position relative
+			color azul3
+			+hasta( escritorio )
+				font-size (17 / 16)rem
+				padding 11px 0
+
+		.activo
+			background linear-gradient(top, rojo2, rojo3)
+			color blanco
+			text-shadow 0 2px 2px gris
+			&:before
+				content ''
+				background url('../img/icons/arrow-menu.png') no-repeat
+				width 36px
+				height 16px
+				absolute bottom -16px left 50%
+				margin-left -18px
+
+
+
+
+//pagina
+.paginas
+	height 100vh
+	//min-height 1000px
+	//background #000
+	display flex
+	justify-content center
+	align-items center
+	+hasta( escritorio )
+		display inherit
+		padding 50px 30px
+		height auto
+
+.pagina
+	overflow hidden
+
+//botones
+
+.btn1
+	background linear-gradient(top, #e51b24, #ca1820)
+	color blanco
+	font-size (25 / 16)rem
+	padding 20px
+	display block
+	display inline-block
+	text-shadow 2px 3px 3px #8a1319
+	border none
+	cursor pointer
+	margin 21px 0
+	border 1px solid #9e0b0f
+	min-width 250px
+	outline none
+
+	+hasta( escritorio )
+		font-size (18 / 16)rem
+		padding 1rem 2rem
+		min-width auto
+
+
+.btn2
+	font-size 1rem
+	font-style italic
+	color gris
+	font-weight bold
+	letter-spacing -0.5px
+
+
+
+// FOOTER
+#pie
+	position fixed
+	width 100vw
+	bottom 0
+	z-index 2
+	background azul3
+	color blanco
+	box-sizing border-box
+	padding 15px 0
+	a
+		color blanco
+	+hasta( escritorio )
+		position inherit
+
+	.contenedor
+		display flex
+		justify-content space-between
+		align-items center
+		padding 0 15px
+		+hasta( escritorio )
+			display inherit
+			text-align center
+		.social
+			+hasta( escritorio )
+				margin 0 0 15px 0
+			a
+				margin 0 17px 0 0
+				font-size (17.25 / 16)rem
+				+hasta( escritorio )
+					margin 0 10px
+				&:hover
+					i
+						text-shadow 1px 1px 5px negro
+		.enlaces
+			font-family 'Arial'
+			font-size ( 11 / 16)rem
+			a:hover
+				text-decoration underline
+			span
+				margin 0 5px
+				display inline-block
+
+
+
+
+// MENU
+.control
+	border-top 7px double blanco
+	border-bottom 7px double blanco
+	height 3px
+	width 19px
+	display block
+.menu
+	font-size 1rem
+	+hasta( escritorio )
+		display none
+		position absolute
+		top 48px
+		left 0
+		width 100%
+		z-index 9
+	li
+		display inline-block
+		position relative
+		z-index 100
+		+hasta( escritorio )
+			display block
+			margin 0
+
+		a
+			font-weight 600
+			text-decoration none
+			padding 0 25px
+			display block
+			color #fff
+			transition all 0.2s ease-in-out 0s
+			letter-spacing 0.07rem
+			line-height 0.9rem
+
+		&:hover
+			ul
+				visibility visible
+				opacity 1
+				transform translate(0, 0)
+	ul
+		visibility hidden
+		opacity 0
+		margin 0
+		padding 10px 0 0 0
+		position absolute
+		left 0px
+		z-index 99
+		transform translate(0, 20px)
+		transition all 0.2s ease-out
+		min-width 179px
+		li
+			display block
+			float none
+			background none
+			margin 0
+			padding 0
+			border none
+			font-size (14 / 16)rem
+
+			a
+				font-weight normal
+				display block
+				color azul3
+				padding 0
+
+				span
+					margin 0 16px
+					padding 20px 50px 20px 13px
+					border-bottom 1px solid gris3
+					letter-spacing -0.5px
+					display block
+					font-weight bold
+					background url('../img/nivel-1.png') no-repeat center right 14px
+					transition all .2s
+				&:hover
+					span
+						background url('../img/nivel-1-hov.png') no-repeat center right 16px
+				i
+					letter-spacing auto
+					margin-right 10px
+			&:last-child
+				span
+					border-bottom none
+
+.pop-ac
+	filter: blur(3px)
+
+.pop
+	position fixed
+	top 120vh
+	width 100vw
+	height 100vh
+	z-index 99999
+	display flex
+	align-items center
+	flex-direction column
+	background alpha(azul5, .88)
+
+	&.visible
+		top 0
+
+	h3
+		color rojo1
+		font-size (145.8  / 16)rem
+		font-family 'PermanentMarker'
+		font-weight bold
+		margin-top 250px
+		z-index 2
+		+hasta( escritorio )
+			font-size (90.8  / 16)rem
+
+	p
+		color blanco
+		font-size (17 / 16)rem
+		max-width 430px
+		margin 0 auto
+		text-align center
+		+hasta( escritorio )
+			padding 0 15px
+	.hey1
+		text-align right
+		position absolute
+		top -5px
+		margin-left 18%
+
+//.visibles
+//	display none
+
+
+
+.responsive-menu
+	display none
+	width 100%
+	padding 10px 0
+	color #fff
+	text-transform uppercase
+	font-weight 600
+	+hasta( escritorio )
+		display block
+
+@media (max-width: 767px) {
+
+
+	.menu li:hover>ul {
+	  visibility: visible;
+	  opacity: 1;
+	  position: relative;
+	  transform: initial;
+	}
+
+
+}

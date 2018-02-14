@@ -1,0 +1,110 @@
+@require "base/utiles"
+@require "nib"
+@require "animations"
+
+body
+	background url('../img/bg-blue.jpg') #29389f center no-repeat
+	background-size cover
+	min-height 700px
+
+.columns
+	height 100vh
+	display flex
+	justify-content center
+	align-items center
+	color blanco
+	background url('../img/bg-line.png') no-repeat
+	background-position calc(50% + 45px) center
+	+hasta( escritorio )
+		flex-direction column
+		background url('../img/bg-line-horiz.png') no-repeat
+		background-position center 43%
+		min-height 700px
+
+ 	.col
+		width 500px
+		padding 0 30px
+		+hasta( escritorio )
+			width auto
+
+	.logo
+		display flex
+		align-items flex-end
+		flex-direction column
+		+hasta( escritorio )
+			max-width 200px
+			margin 0 auto
+
+		.yapa
+			padding 0 30px 0 0
+			+hasta( escritorio )
+				max-width 100px
+				margin-bottom 40px
+			span
+				font-size (13.98 / 16)rem
+				margin-bottom 10px
+				display block
+			img
+				padding 0 0 0 10px
+	.login
+
+		text-align center
+		font-style italic
+		form
+			+desde( escritorio )
+				width 265px
+				margin 0 auto
+		.fb
+			background linear-gradient(top, azul1, azul2)
+			color blanco
+			font-size 1rem
+			//font-family 'DinotMedium'
+			font-style normal
+			display block
+			padding 8px	0 10px 0
+			max-width 260px
+			text-align center
+			margin-bottom 23px
+			i
+				font-size 1.4rem
+			span
+				padding-left 15px
+				letter-spacing -1.5px
+				text-shadow 3px 3px 6px negro1
+
+
+		.form
+			margin 13px 0
+			.camp
+				border none
+				box-sizing border-box
+				padding 12px
+				display block
+				margin-bottom 8px
+				width 100%
+				font-family 'Arial'
+				color gris1
+				font-size (12.01 / 16)rem
+				&.nombre
+					background url('../img/icons/user.png') blanco no-repeat right 10px center
+				&.email
+					background url('../img/icons/mail.png') blanco no-repeat right 10px center
+			.recordar
+				font-weight light
+
+				font-size (14 / 16)rem
+				letter-spacing -0.8px
+				a
+					text-decoration underline
+					color blanco
+			.submit
+				font-size (25 / 16)rem
+				border none
+				cursor pointer
+				width 100%
+		.crear
+			font-weight bold
+
+			font-size (14 / 16)rem
+			text-decoration underline
+			color blanco

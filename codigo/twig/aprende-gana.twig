@@ -1,0 +1,80 @@
+{% extends "estructura.twig" %}
+
+{% set seccion = "aprende-gana" %}
+{% set info = datos.portada %}
+
+{% block css %}
+    <link rel="stylesheet" href="css/{{ seccion }}.css" media="screen" title="estilo">
+{% endblock %}
+
+{% block cuerpo %}
+ 
+	<!-- contenido -->
+	<section class="contenedor paginas">
+		  
+		 <ul class="opc">
+		 	<li>
+		 		<a href="video.html">
+		 		<div><img src="img/opc-emprendedor.png" alt=""></div>
+		 		<div class="tit">
+		 			<div class="number">1</div>
+		 			<div class="letra"><span>SÉ UN</span>EMPRENDEDOR</div>
+		 		</div>
+		 		</a>
+		 	</li>
+
+		 	<li>
+		 		<a href="#">
+		 		<div><img src="img/opc-ahorros.png" alt=""></div>
+		 		<div class="tit">
+		 			<div class="number">2</div>
+		 			<div class="letra"><span>AHORROS</span></div>
+		 		</div>
+		 		</a>
+		 	</li>
+
+		 	<li>
+		 		<a href="#">
+		 		<div><img src="img/opc-inversion.png" alt=""></div>
+		 		<div class="tit">
+		 			<div class="number">3</div>
+		 			<div class="letra"><span>INVERSIÓN</span></div>
+		 		</div>
+		 		</a>
+		 	</li>
+
+		 	<li>
+		 		<a href="#">
+		 		<div><img src="img/opc-educacion.png" alt=""></div>
+		 		<div class="tit">
+		 			<div class="number">4</div>
+		 			<div class="letra"><span>EDUCACIÓN CIVICA</span></div>
+		 		</div>
+		 		</a>
+		 	</li>
+
+		 	<p class="subtit">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam ornare volutpat massa pulvinar fringilla. Curabitur gravida, tortor iaculis egestas efficitur, est neque bibendum mi, </p>
+	</section>
+		 </ul>
+		 
+	<!-- / contenido -->
+ 
+
+{% endblock %}
+
+{% block js %}
+<script src="js/{{ seccion }}.js"></script>
+<script>
+$(document).ready(function(){ 
+	var touch 	= $('#resp-menu');
+	var menu 	= $('.menu');
+	var sombra 	= $('.sombra');
+ 
+	$(touch).on('click', function(e) {
+		e.preventDefault();
+		menu.slideToggle();
+
+	});
+});
+</script> 
+{% endblock %}

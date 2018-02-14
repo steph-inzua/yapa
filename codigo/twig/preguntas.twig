@@ -1,0 +1,54 @@
+{% extends "estructura.twig" %}
+
+{% set seccion = "preguntas" %}
+{% set info = datos.portada %}
+
+{% block css %}
+    <link rel="stylesheet" href="css/{{ seccion }}.css" media="screen" title="estilo">
+{% endblock %}
+
+{% block cuerpo %}
+ 
+	<!-- contenido -->
+	<section class="contenedor paginas">
+		<div class="cabecera">
+		  <h2>NIVEL 1: SER UN EMPRENDEDOR</h2>
+		  <h3>PREGUNTA 2 / 4</h3>
+		  
+		</div>
+
+		<div class="lista">
+			<p class="descrip"> Lorem ipsum sit amet, consectetur adipiscing. Lorem ipsum dolor sit amet, consectetur adipiscing</p>
+			<ul>
+				<li><span  class="check">Sed ut pers rror sit voluptatem accusantiu ed ut pers rror sit voluptatem accusantiu</span></li>
+				<li><span class="aspa">Sed ut pers rror sit voluptatem accusantiu ed ut pers rror sit voluptatem accusantiu</span></li>
+				<li><span class="aspa">Sed ut pers rror sit voluptatem accusantiu ed ut pers rror sit voluptatem accusantiu</span></li>
+
+			</ul>
+			<div align="center"><a href="resultado.html" class="btn1">VER TU RESULTADO</a></div>
+		</div>
+
+	</section>
+		 
+		 
+	<!-- / contenido -->
+ 
+
+{% endblock %}
+
+{% block js %}
+<script src="js/{{ seccion }}.js"></script>
+<script>
+$(document).ready(function(){ 
+	var touch 	= $('#resp-menu');
+	var menu 	= $('.menu');
+	var sombra 	= $('.sombra');
+ 
+	$(touch).on('click', function(e) {
+		e.preventDefault();
+		menu.slideToggle();
+
+	});
+});
+</script> 
+{% endblock %}

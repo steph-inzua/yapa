@@ -1,0 +1,76 @@
+{% extends 'base.twig' %}
+
+{% block pagina %}
+	<section class="pagina">
+		{% block encabezado %}
+			<header id="encabezado">
+			<div class="contenedor">
+				<a href="index.html">
+					<h1 class="titulo">
+						<img src="img/logo-se-un-emprendedor2.png" alt="" class="logo">
+					</h1>
+				</a>
+				<nav>
+					<a id="resp-menu" class="responsive-menu" href="#"><span class="control"></span></a>
+					<ul class="menu">
+					<li class="usuario"><span>Hola</span>, Pablo Port <img src="img/usuario.png" alt=""></li>
+					<li><a href="#" class="niveles"><span>Niveles
+
+					</span></a>
+						<ul class="sub-menu">
+							<li><a href="#"><span class="ic"><i class="fa fa-angle-double-right" aria-hidden="true"></i> Nivel 1</span></a></li>
+							<li><a href="#"><span class="ic"><i class="fa fa-angle-double-right" aria-hidden="true"></i> Nivel 2</span></a></li>
+							<li><a href="#"><span class="ic"><i class="fa fa-angle-double-right" aria-hidden="true"></i> Nivel 3</span></a></li>
+						</ul>
+					</li>
+
+
+					</ul>
+				</nav>
+			</div>
+			</header>
+		{% endblock %}
+
+		{% block barra %}
+			<section id="barra-menu">
+				<ul class="contenedor">
+					<li><a href="aprende-gana.html" class="activo">APRENDE Y GANA</a></li><!--
+					--><li><a href="#">¿CÓMO GANAR?</a></li><!--
+					--><li><a href="tu-yapa.html">TU YAPA</a></li>
+				</ul>
+			</section>
+		{% endblock %}
+
+
+		<article id="cuerpo">
+			{% block cuerpo %}
+
+			{% endblock %}
+		</article>
+
+
+		{% block pie %}
+			<footer id="pie">
+			 <div class="contenedor">
+				<div class="social"> <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a> <a href="#"><i class="fa fa-youtube-play" aria-hidden="true"></i></a></div>
+
+				<div class="enlaces">
+					<a href="#">Términos y condiciones</a> <span>|</span> <a href="#">Preguntas frecuentes</a>
+				</div>
+			</div>
+			</footer>
+		{% endblock %}
+
+		 </div>
+
+
+	</section>
+
+	<div class="pop visibles">
+		<div class="hey1"><img src="img/copa-act.png" alt=""> <br> <img src="img/flecha-blanca.png" alt=""></div>
+ 		<h3>HEY!</h3>
+ 		<p>Vas a salir de la sección, pero no te preocupe, tus beneficios
+y avances estarán guardados en la parte superior.</p>
+ 	</div>
+
+{% endblock %}

@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8">
+		<meta charset="utf8" />
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1.0, maximum-scale=1.0" />
+		<title>Yapa</title>
+		<link rel="stylesheet" href="css/general.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<script>
+			document.createElement("picture");
+		</script>
+		<script src="js/picturefill.min.js"></script>
+		<link rel="stylesheet" href="css/resultado.css" media="screen" title="estilo"> </head>
+	<body>
+		<section class="pagina">
+			<header id="encabezado">
+				<div class="contenedor">
+					<a href="index.html">
+						<h1 class="titulo">
+							<img src="img/logo-se-un-emprendedor2.png" alt="" class="logo"> </h1>
+					</a>
+					<nav>
+						<a id="resp-menu" class="responsive-menu" href="#">
+							<span class="control"></span>
+						</a>
+						<ul class="menu">
+							<li class="usuario">
+								<span>Hola</span>, Pablo Port
+								<img src="img/usuario.png" alt="">
+							</li>
+							<li>
+								<a href="#" class="niveles">
+									<span>Niveles </span>
+								</a>
+								<ul class="sub-menu">
+									<li>
+										<a href="#">
+											<span class="ic">
+												<i class="fa fa-angle-double-right" aria-hidden="true"></i> Nivel 1</span>
+										</a>
+									</li>
+									<li>
+										<a href="#">
+											<span class="ic">
+												<i class="fa fa-angle-double-right" aria-hidden="true"></i> Nivel 2</span>
+										</a>
+									</li>
+									<li>
+										<a href="#">
+											<span class="ic">
+												<i class="fa fa-angle-double-right" aria-hidden="true"></i> Nivel 3</span>
+										</a>
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</nav>
+				</div>
+			</header>
+			<section id="barra-menu">
+				<ul class="contenedor">
+					<li>
+						<a href="aprende-gana.html" class="activo">APRENDE Y GANA</a>
+					</li>
+					<!--
+					-->
+					<li>
+						<a href="#">¿CÓMO GANAR?</a>
+					</li>
+					<!--
+					-->
+					<li>
+						<a href="tu-yapa.html">TU YAPA</a>
+					</li>
+				</ul>
+			</section>
+			<article id="cuerpo">
+				<!-- contenido -->
+				<section class="contenedor paginas">
+					<div class="cabecera">
+						<h3>FELICITACIONES
+							<span class="modo">EMPRENDEDOR</span>
+						</h3>
+						<p class="sub">Tenemos un beneficio para ti por completar el primer nivel</p>
+					</div>
+					<div class="box-txt"></div>
+					<p class="detalle">Quieres seguir conociendo más de los beneficios continua al siguiente nivel</p>
+					<div align="center">
+						<a href="#" class="btn1">SIGUIENTE NIVEL >>></a>
+					</div>
+					<a href="#" class="btn2">COMPARTIR</a>
+				</section>
+				<!-- / contenido -->
+			</article>
+			<footer id="pie">
+				<div class="contenedor">
+					<div class="social">
+						<a href="#">
+							<i class="fa fa-facebook" aria-hidden="true"></i>
+						</a>
+						<a href="#">
+							<i class="fa fa-youtube-play" aria-hidden="true"></i>
+						</a>
+					</div>
+					<div class="enlaces">
+						<a href="#">Términos y condiciones</a>
+						<span>|</span>
+						<a href="#">Preguntas frecuentes</a>
+					</div>
+				</div>
+			</footer>
+			</div>
+		</section>
+		<div class="pop visibles">
+			<div class="hey1">
+				<img src="img/copa-act.png" alt="">
+				<br>
+				<img src="img/flecha-blanca.png" alt="">
+			</div>
+			<h3>HEY!</h3>
+			<p>Vas a salir de la sección, pero no te preocupe, tus beneficios y avances estarán guardados en la parte superior.</p>
+		</div>
+		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+		<script type="text/javascript" src="js/general.js" async defer></script>
+		<script src="js/resultado.js"></script>
+		<script>
+			$(document).ready(function()
+			{
+				var touch = $('#resp-menu');
+				var menu = $('.menu');
+				var sombra = $('.sombra');
+				$(touch).on('click', function(e)
+				{
+					e.preventDefault();
+					menu.slideToggle();
+				});
+			});
+		</script>
+	</body>
+</html>
